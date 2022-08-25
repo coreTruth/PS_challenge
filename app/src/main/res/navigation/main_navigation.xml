@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_drivers">
+    <fragment
+        android:id="@+id/fragment_drivers"
+        android:name="com.app.platformscience.presentation.driver.DriverFragment"
+        android:label="Drivers"
+        tools:layout="@layout/fragment_driver">
+        <action
+            android:id="@+id/action_driver_to_shipment"
+            app:destination="@id/fragment_shipments" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_shipments"
+        android:name="com.app.platformscience.presentation.shipment.ShipmentFragment"
+        android:label="Shipment"
+        tools:layout="@layout/fragment_shipment">
+
+        <argument
+            android:name="driver"
+            app:argType="com.app.platformscience.data.entity.Driver" />
+    </fragment>
+
+
+</navigation>
